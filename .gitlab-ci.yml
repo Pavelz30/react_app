@@ -72,9 +72,6 @@ activate_prod:
   only:
     - master
 
-
-
-
 revert:
   stage: revert
   when: manual
