@@ -49,7 +49,7 @@ deploy_prod:
   script:
     - cp -rv build_$env $docker_html_path/test-app/${env}_$CI_COMMIT_SHA
     #Ссылка на предыдущую папку, который ссылался раньше на /var/www/html (предыдущая версия прода)
-    - ln -fsnv $docker_html_path/test-app/${env}_$CI_COMMIT_BEFORE_SHA /var/$docker_html_path/test-app/${env}_$CI_COMMIT_SHA/prev-version || true
+    - ln -fsnv /var$docker_html_path/test-app/${env}_$CI_COMMIT_BEFORE_SHA /var$docker_html_path/test-app/${env}_$CI_COMMIT_SHA/prev-version || true
   only:
     - master
 
