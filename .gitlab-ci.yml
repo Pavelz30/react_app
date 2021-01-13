@@ -9,7 +9,6 @@ variables:
   env: prod
   deploy_subfolder: html
 
-
 install_dependencies:
   image: node:14.15.0-stretch
   stage: build
