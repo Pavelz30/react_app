@@ -47,7 +47,7 @@ deploy_staging:
 deploy_prod:
   stage: deploy
   script:
-    - cp -r build_$env $docker_html_path/test-app/${env}_$CI_COMMIT_SHA
+    - cp -rv build_$env $docker_html_path/test-app/${env}_$CI_COMMIT_SHA
     #Ссылка на предыдущую папку, который ссылался раньше на /var/www/html (предыдущая версия прода)
     - ln -fsnv $docker_html_path/test-app/${env}_$CI_COMMIT_BEFORE_SHA $docker_html_path/test-app/${env}_$CI_COMMIT_SHA/prev-version || true
   only:
