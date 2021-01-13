@@ -75,6 +75,13 @@ revert:
   stage: revert
   when: manual
   script:
-    - cp -Pv --remove-destination $docker_html_path/test-app/$CI_COMMIT_SHA/prev-version $docker_html_path/html
+    - rm $docker_html_path/$deploy_subfolder
+    - cp -Pv $docker_html_path/test-app/${env}_$CI_COMMIT_SHA/prev-version $docker_html_path/html
 
 
+revert_previous:
+  stage: revert
+  when: manual
+  script:
+    - rm $docker_html_path/$deploy_subfolder
+    - cp -Pv $docker_html_path/test-app/${env}_$CI_COMMIT_BEFORE_SHA/prev-version $docker_html_path/$deploy_subfolder
