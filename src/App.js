@@ -7,9 +7,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 	<h1>Test of revert</h1>
-        <p>
+        <h2>
           Ansible
-        </p>
+        </h2>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
