@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-	<h1>10.0.2.15</h1>
+	      <h1>Test of revert</h1>
         <h2>
           Akilin Alexander
         </h2>
